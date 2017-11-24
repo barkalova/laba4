@@ -126,8 +126,8 @@ void *commandant() {
 				pthread_cond_wait(&commandant_condition, &commandant_mutex);
 				int newStudents = getStudentsInRoomAmount();
 				if (!newStudents) {
-					printf("hui\n");
-					//pthread_mutex_lock(&commandant_mutex);
+					
+					
 					_commandant.inRoom = false;
 					pthread_mutex_unlock(&commandant_mutex);
 					print_time_message("Commandant has left the room");
